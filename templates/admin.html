@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+
+    <style>
+        form {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            animation: fadeIn 1s ease;
+            background-color: #e3ece300;
+            border: 5px solid #e3ece300;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+
+        .form-group label {
+            width: 30%;
+            font-size: 14px;
+
+            text-align: left;
+            margin-right: 10px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group input[type="password"] {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+
+
+        #address {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+        form h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1C92D2;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+        }
+
+        form input[type="submit"] {
+
+            background-color: #1C92D2;
+            color: #fff;
+            font-size: 12px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Flash message styles */
+        .alert {
+            margin: 20px auto;
+            width: 50%;
+            padding: 10px 20px;
+            text-align: center;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .alert-success {
+            background-color: #ffffff;
+            border-color: #ffffff00;  
+            color: #f1f1f1;
+        }
+
+        .alert-info {
+            background-color: #d9edf7;
+            border-color: #ffffff;
+            color: #31708f;
+        }
+
+        .alert-warning {
+            background-color: #fcf8e3;
+            border-color: #faebcc;
+            color: #8a6d3b;
+        }
+
+        .alert-danger {
+            background-color: #f2dede;
+            border-color: #ebccd1;
+            color: #a94442;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> Organ Donation Management System</a>
+
+        <nav class="navbar">
+            <a href="/">home</a>
+            <a href="/donor">Donor </a>
+            <a href="/patient">Patient</a>
+            <a href="/admin">Admin</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+
+    <main>
+
+        <section class="home" id="home">
+
+            <div class="image">
+                <!-- <img src="image/organ-donar3.jpg" alt=""> -->
+                <img src="/static/img/organ-donar3.jpg" alt="">
+            </div>
+            <div class="content">
+                <form id="login-form" action="/admin_login" method="POST">
+                    <h1> Admin Login</h1>
+                    <div class="form-group">
+                        <label for="Username">Username</label>
+                        <input type="text" id="Username" name="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password </label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="form-group" style="display: flex; justify-content: center; padding: 10px; margin: 10px">
+                        <input type="submit" value="Login">
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+        <div class="alert alert-success">
+            <!-- Success message content -->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="alert alert-danger">
+                <ul>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            {% endwith %}
+        </div>
+
+
+
+    </main>
+
+</body>
+
+</html>

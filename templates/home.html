@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> Organ Donation Management System</a>
+
+        <nav class="navbar">
+            <a href="/">home</a>
+            <a href="/donor">Donor </a>
+            <a href="/patient">Patient</a>
+            <a href="/admin">Admin</a>
+
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+
+
+    <section class="home" id="home">
+
+        <div class="image">
+            <!-- <img src="image/home-img.svg" alt=""> -->
+            <img src="/static/img/home-img.svg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Save a Life Afterlife</h3>
+            <p>To become an organ donor, individuals can usually register with their country's organ donation registry
+                or indicate their intent on their driver's license. It is crucial to discuss the decision to be an organ
+                donor with family members to ensure that their wishes are respected.</p>
+            <a href="/donor" class="btn"> Register Now <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- icons section starts  -->
+
+    <section class="services" id="services">
+
+        <h2 class="heading"> Our <span>Key Statistics</span> </h2>
+
+        <div class="icons-container">
+
+            <div class="icons">
+                <i class="fas fa-heart"></i>
+                <p>Donors Registered</p>
+                <h3>300+</h3>
+
+            </div>
+
+            <div class="icons">
+                <i class="fas fa-hand-holding-medical"></i>
+                <p>Organ Transplants Conducted</p>
+                <h3>150+</h3>
+
+            </div>
+
+            <div class="icons">
+                <i class="fas fa-life-ring"></i>
+                <p>Lives Saved</p>
+                <h3>500+</h3>
+
+            </div>
+
+            <div class="icons">
+                <i class="fas fa-hospital"></i>
+                <p>Organ Types Available</p>
+                <h3>10+</h3>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- icons section ends -->
+
+    <!-- services section starts  -->
+
+    <section class="services" id="services">
+
+        <h1 class="heading"> our <span>services</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-user-plus"></i>
+                <h3>Donor Registration Assistance</h3>
+                <p>We help donors with the registration process for organ donation.</p>
+                <a href="#" class="btn"> Learn More <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Organ Matching and Allocation</h3>
+                <p>We efficiently match available organs with patients in need.</p>
+                <a href="#" class="btn"> Learn More <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-stethoscope"></i>
+                <h3>Medical Consultations</h3>
+                <p>Consult with medical professionals regarding organ donation.</p>
+                <a href="#" class="btn"> Learn More <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <!-- Add more relevant services here -->
+
+        </div>
+
+    </section>
+
+    <!-- services section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>about</span> us </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <!-- <img src="image/about-img.svg" alt=""> -->
+                <img src="/static/img/about-img.svg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>we take care of your healthy life</h3>
+                <p>Organ donation is an essential aspect of modern healthcare, allowing medical professionals to provide
+                    life-saving treatments and improve the quality of life for those in need. It relies on the
+                    generosity and altruism of individuals who choose to become donors.
+                </p>
+
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+
+
+    <!-- booking section starts   -->
+
+    <section class="book" id="book">
+
+        <h1 class="heading"> <span>Any</span> Query ? </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="img/book-img.svg" alt="">
+                <img src="/static/img/book-img.svg" alt="">
+            </div>
+
+
+            <form id='query-form' action="/submit_query" method="POST">
+                <h3>Contact Us</h3>
+                <input type="text" id="full_name" name="full_name" placeholder="Full Name" class="box">
+                <input type="number" id="phone_number" name="phone_number" placeholder="Phone Number" class="box">
+                <input type="email" id="email" name="email" placeholder="Email Address" class="box">
+                <textarea placeholder="Your Message" id="message" name="message" rows="4" cols="50"
+                    class="box"></textarea>
+                <input type="submit" value="Send" onclick="showAlertAndSubmit()" class="btn">
+            </form> 
+
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- booking section ends -->
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> Patient's <span>review</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <!-- <img src="image/pic-1.png" alt=""> -->
+                <img src="/static/img/pic-1.png" alt="">
+                <h3>John Doe - Organ Donor</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text">
+                    As an organ donor, I've had the opportunity to use this system, and I must say it has made the
+                    entire
+                    donation process incredibly straightforward. The system's user interface is intuitive, and the
+                    communication with healthcare professionals has been seamless. Kudos to the team behind this
+                    initiative!</p>
+            </div>
+
+            <div class="box">
+                <!-- <img src="image/pic-2.png" alt=""> -->
+                <img src="/static/img/pic-2.png" alt="">
+                <h3>Dr. Jane Smith - Transplant Surgeon</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text">This organ donation management system has revolutionized the way we handle organ
+                    transplants. It
+                    streamlines the allocation process, ensuring that organs reach the right recipients promptly. It's a
+                    game-changer for the medical community.</p>
+            </div>
+
+            <div class="box">
+                <!-- <img src="image/pic-3.png" alt=""> -->
+                <img src="/static/img/pic-3.png" alt="">
+                <h3>Susan Williams - Recipient Advocate</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text"> As an advocate for organ recipients, I've seen firsthand how this system has increased
+                    transparency and
+                    improved access to life-saving organs. It has given hope to countless individuals in need of
+                    transplants.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- blogs section starts  -->
+
+    <section class="blogs" id="blogs">
+
+        <h1 class="heading"> our <span>blogs</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <!-- <img src="image/blog-1.jpg" alt=""> -->
+                    <img src="/static/img/blog-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
+                        <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                    </div>
+                    <h3>My Journey as an Organ Donor</h3>
+                    <p>I recently had the privilege of donating one of my kidneys, and I want to share my experience
+                        with
+                        you. In this blog post, I'll take you through the decision-making process, the surgery itself,
+                        and the profound impact it had on both my life and the life of the recipient.</p>
+                    <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <!-- <img src="image/blog-2.jpg" alt=""> -->
+                    <img src="/static/img/blog-2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a href="#"> <i class="fas fa-calendar"></i> 15 june, 2022 </a>
+                        <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                    </div>
+                    <h3>The Power of Organ Donation: Saving Lives Every Day</h3>
+                    <p>Organ donation is not just a one-time act; it's a continuous source of hope and healing. In this
+                        blog, I'll discuss the incredible impact that organ donation has on individuals, families, and
+                        communities. Join me in celebrating the heroes who make it all possible.</p>
+                    <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <!-- <img src="image/blog-3.jpg" alt=""> -->
+                    <img src="/static/img/blog-3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a href="#"> <i class="fas fa-calendar"></i> 30th may, 2022 </a>
+                        <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                    </div>
+                    <h3>Organ Donation: A Lifelong Commitment to Giving</h3>
+                    <p>Being an organ donor is not just about the initial act; it's a lifelong commitment to making a
+                        difference. Join me as I share stories of organ recipients whose lives have been transformed by
+                        the gift of life, and discover how we can all play a part in this beautiful journey.</p>
+                    <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- blogs section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> services </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> about </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> Query </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> review </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> blogs </a>
+            </div>
+
+            <div class="box">
+                <h3>our services</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> Donor Registration Assistance </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> Organ Matching And Allocation </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> Medical Consultations</a>
+                <!-- <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a> -->
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+                <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+                <a href="#"> <i class="fas fa-envelope"></i> organdonation.com </a>
+                <a href="#"> <i class="fas fa-envelope"></i> www.organdonation.com </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Pune - Maharashtra </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="https://facebook.com/freewebsitecode/"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="https://freewebsitecode.com"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="https://www.youtube.com/channel/UC9HlQRmKgG3jeVD_fBxj1Pw/videos"> <i
+                        class="fab fa-youtube"></i> youtube </a>
+                <a href="https://freewebsitecode.com"> <i class="fab fa-instagram"></i> instagram </a>
+                <a href="https://freewebsitecode.com"> <i class="fab fa-linkedin"></i> linkedin </a>
+                <a href="https://freewebsitecode.com"> <i class="fab fa-pinterest"></i> pinterest </a>
+            </div>
+
+        </div>
+
+        <div class="credit"> <span><a href="http://127.0.0.1:5500/index.html"></a>Organ Donation Management
+                System</span> </div>
+
+    </section>
+
+
+    <script src="js/script.js"></script>
+
+    <script>
+        function showAlertAndSubmit() {
+            alert("Query Submitted successful!");
+            document.getElementById("patient-form").submit(); 
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+
+    <style>
+        form {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            animation: fadeIn 1s ease;
+            background-color: #e3ece300;
+            border: 5px solid #e3ece300;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+
+        .form-group label {
+            width: 30%;
+            font-size: 14px;
+            text-align: left;
+            margin-right: 10px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group input[type="date"],
+        .form-group input[type="email"] {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+
+
+        #address {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+        form h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1C92D2;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+        }
+
+        form input[type="submit"] {
+
+            background-color: #1C92D2;
+            color: #fff;
+            font-size: 12px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .select-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 70%;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> Organ Donation Management System</a>
+
+        <nav class="navbar">
+            <a href="/">home</a>
+            <a href="/donor">Donor </a>
+            <a href="/patient">Patient</a>
+            <a href="/admin">Admin</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+
+    <main>
+
+        <section class="home" id="home">
+
+            <div class="image">
+                <!-- <img src="image/organ-donar3.jpg" alt=""> -->
+                <img src="/static/img/organ-donar3.jpg" alt="">
+            </div>
+            <div class="content">
+                <!-- <form action="/insert_patient" method="POST"> -->
+                    <form id="patient-form" action="/insert_patient" method="POST">
+                    <h1> Patient Details</h1>
+                    <div class="form-group">
+                        <label for="Patientname">Patient Name</label>
+                        <input type="text" id="Patientname" name="Patientname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Age">Age </label>
+                        <input type="number" id="Age" name="Age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Gender">Gender </label>
+                        <div class="select-wrapper">
+                            <select type="text" id="Gender" name="Gender" required>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address </label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="BloodGroup">Blood group </label>
+                        <div class="select-wrapper">
+                            <select id="BloodGroup" name="BloodGroup" required>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email ID </label>
+                        <input type="email" id="Email" name="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Contactnumber">Contact Number </label>
+                        <input type="text" id="Contactnumber" name="Contactnumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="NeededOrgan">Needed Organ </label>
+                        <div class="select-wrapper">
+                            <select id="NeededOrgan" name="NeededOrgan" required>
+                                <option value="Heart">Heart</option>
+                                <option value="Kidney">Kidney</option>
+                                <option value="Liver">Liver</option>
+                                <option value="Lung">Lung</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Timereqired">Time Required </label>
+                        <input type="date" id="Timereqired" name="Timereqired" required>
+                    </div>
+                    <div class="form-group" style="display: flex; justify-content: center; padding: 10px; margin: 10px">
+                        <input type="submit" value="Submit" onclick="showAlertAndSubmit()">
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <script>
+        function showAlertAndSubmit() {
+            alert("Registration successful!");
+            document.getElementById("patient-form").submit(); 
+        }
+    </script>
+
+</body>
+
+</html>
